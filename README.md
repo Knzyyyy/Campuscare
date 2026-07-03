@@ -11,6 +11,121 @@ Features:
 - ⭐ Rating & feedback kepuasan layanan
 - 📱 Responsive design (mobile-friendly dengan bottom navigation)
 
+# 🎓 CampusCare
+
+**Sistem Informasi Pelaporan, Monitoring, dan Evaluasi Layanan Kampus**
+
+CampusCare adalah aplikasi web internal kampus untuk melaporkan masalah fasilitas, memantau status penanganan, dan mengevaluasi kualitas layanan kampus secara real-time.
+
+---
+
+## 🚀 Tech Stack
+
+- **Backend**: Laravel 10
+- **Database**: MySQL
+- **Frontend**: Blade + Tailwind CSS + Alpine.js
+- **Chart**: Chart.js
+
+---
+
+## ✨ Fitur Utama
+
+- 🔐 Multi-role authentication (Mahasiswa, Dosen, Admin Prodi, Admin Fakultas, Staff, Super Admin)
+- 📝 Buat laporan masalah fasilitas kampus dengan upload foto
+- 🔄 Tracking status laporan real-time (Terkirim → Diverifikasi → Diproses → Selesai)
+- 📊 Dashboard monitoring dengan grafik kategori laporan
+- 🔔 Notifikasi in-app setiap ada update laporan
+- ⭐ Rating & feedback kepuasan layanan
+- 📱 Tampilan responsif (mobile-friendly dengan bottom navigation)
+
+---
+
+## ⚙️ Cara Instalasi
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Knzyyyy/Campuscare.git
+cd Campuscare
+```
+
+### 2. Install Dependencies
+
+```bash
+composer install
+npm install
+```
+
+### 3. Konfigurasi Environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Edit file `.env`, sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=campuscare
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 4. Buat Database
+
+Buat database baru di MySQL dengan nama `campuscare`, lalu jalankan:
+
+```bash
+php artisan migrate --seed
+```
+
+### 5. Storage Link
+
+```bash
+php artisan storage:link
+```
+
+### 6. Build Assets
+
+```bash
+npm run build
+```
+
+### 7. Jalankan Aplikasi
+
+```bash
+php artisan serve
+```
+
+Buka browser dan akses: **http://127.0.0.1:8000**
+
+---
+
+## 👤 Akun Default (Setelah Seeding)
+
+| Role | Email | Password |
+|------|-------|----------|
+| Super Admin | superadmin@campuscare.id | password |
+| Admin Fakultas | admin.fakultas@campuscare.id | password |
+| Admin Prodi | admin.prodi@campuscare.id | password |
+| Staff | staff@campuscare.id | password |
+| Dosen | dosen@campuscare.id | password |
+| Mahasiswa | mahasiswa@campuscare.id | password |
+
+---
+
+## 📁 Struktur Role & Akses
+
+| Role | Akses |
+|------|-------|
+| **Mahasiswa / Dosen** | Buat laporan, lihat riwayat & status, beri rating |
+| **Admin Prodi / Fakultas** | Verifikasi laporan, assign staff, dashboard monitoring |
+| **Staff / Teknisi** | Update status laporan, upload bukti penyelesaian |
+| **Super Admin** | Kelola semua data (user, kategori, pengaturan sistem) |
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
