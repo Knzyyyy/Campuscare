@@ -1,3 +1,17 @@
+CampusCare is a web-based campus service reporting and monitoring system designed for internal use by students, lecturers, staff, and administrators.
+
+Built with Laravel 10 · MySQL · Tailwind CSS · Alpine.js · Chart.js
+
+Features:
+- 📋 Multi-role authentication (Mahasiswa, Dosen, Admin, Staff, Super Admin)
+- 📝 Laporan masalah fasilitas kampus dengan upload foto
+- 🔄 Real-time status tracking (Terkirim → Diverifikasi → Diproses → Selesai)
+- 📊 Dashboard monitoring dengan grafik laporan
+- 🔔 Sistem notifikasi in-app
+- ⭐ Rating & feedback kepuasan layanan
+- 📱 Responsive design (mobile-friendly dengan bottom navigation)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
